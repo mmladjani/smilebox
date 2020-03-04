@@ -1,0 +1,131 @@
+
+/* GENERAL CSS */
+
+@font-face {
+  font-family: Helsinki;
+  src: url(../fonts/helsinki.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-Bold.woff);
+  src: url(../fonts/Inter-ExtraLight.woff);
+  src: url(../fonts/Inter-Regular.woff);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+}
+
+.main-font {
+  font-family: Helsinki, sans-serif;
+  color: white;
+}
+
+.secondary-font {
+  font-family: Inter, sans-serif;
+  color: white;
+}
+
+.scrolled {
+  background-color: rgba(0,0,0,0.3);
+  transition: 300ms ease;
+}
+
+.custom-list {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  z-index: 111111;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0);
+  font-size: 3rem;
+}
+
+#main-nav {
+  width:100%;
+  position: fixed;
+  overflow: hidden;
+  z-index: 10000;
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+  transition: 300ms ease;
+}
+
+
+
+#main-nav ul {
+  margin: 0px auto;
+  padding: 25px 0px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0px;
+}
+
+#main-nav ul li {
+  font-size: 1.5rem;
+  margin: 10px 5px;
+  padding: 15px 20px;
+  color: white;
+}
+
+#main-nav ul li a {
+  font-size: 1.5rem;
+  margin: 10px 5px;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+#main-nav ul li a:hover {
+  font-size: 1.5rem;
+  margin: 10px 5px;
+  padding: 15px 20px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+#main-nav ul li a:active {
+  font-size: 1.5rem;
+  margin: 10px 5px;
+  padding: 15px 20px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+
+/* DESKTOP CSS */
+
+#firstSection {
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  min-height: 1080px;
+  background-position: center;
+  margin: 0px auto;
+  }
+
+  #firstSection img {
+    width: 100%;
+
+  }

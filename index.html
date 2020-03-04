@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Smile Box</title>
-    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
     <header>
       <div id="main-nav" class="secondary-font">
         <ul>
-          <li>Pocetna</li>
-          <li>O nama</li>
-          <li>Kontakt</li>
+          <li><a href="http://www.smilebox.rs/index.html">Početna</a></li>
+          <li><a href="#secondSection">O nama</a></li>
+          <li><a href="#thirdSection">Kontakt</a></li>
         </ul>
       </div>
     </header>
@@ -22,25 +25,82 @@
         <p class="secondary-font">Upakovan da iznenadi</p>
         </div>
         <div class="firstSection-products">
-          <div class="first-product"><img src="img/Boys-small-b1h.png" alt="Toys for boys"></div>
-          <div class="second-product"><img src="img/Emoji-small-r5j.png" alt="Emoji toys"></div>
-          <div class="third-product"><img src="img/Girls-small-uRG.png" alt="Toys for girls"></div>
+          <div class="first-product"><a href="http://www.smilebox.rs/index.html/boys.html"><img src="img/Boys-small-b1h.png" alt="Toys for boys"></a></div>
+          <div class="second-product"><a href="http://www.smilebox.rs/index.html/emoji.html"><img src="img/Emoji-small-r5j.png" alt="Emoji toys"></a></div>
+          <div class="third-product"><a href="http://www.smilebox.rs/index.html/girls.html"><img src="img/Girls-small-uRG.png" alt="Toys for girls"></a></div>
         </div>
 
         <img class="middleTop "src="img/slag-gore.png" alt="img">
     </section>
-    <section id="firstSection">
-      <div class="firstSection-text">
-        <h1 class="main-font">Smile Box</h1>
-        <p class="secondary-font">Upakovan da iznenadi</p>
-        </div>
-        <div class="firstSection-products">
-          <div class="first-product"><img src="img/Boys-small-b1h.png" alt="Toys for boys"></div>
-          <div class="second-product"><img src="img/Emoji-small-r5j.png" alt="Emoji toys"></div>
-          <div class="third-product"><img src="img/Girls-small-uRG.png" alt="Toys for girls"></div>
-        </div>
+    <section id="secondSection">
+      <div class="secondSection-text">
+        <h1 class="main-font">O nama</h1>
+        <p class="secondary-font">Smile Box kreiran je sa ciljem da usreći i obraduje najmlađe i najslađe među nama, upravo one koje svojim osmesima i pojavom svakodnevno uveseljavaju čitave porodice i čine ovaj svet neverovatnim mestom.</p>
+        <p class="secondary-font">Upakovan tako da uvek iznenadi, uz kvalitetnu igračku i ukusan slatkiš, namenjen da iz malog pakovanja izmami veliki osmeh.</p>
+        <p class="secondary-font">Svesni odgovornosti koja je pred nama trudimo se da svojom efikasnošću, upornošću i uvek prisutnim osmehom postavimo temelje u plasmanu i distribuciji proizvoda koji predstavlja spoj mašte i uživanja kroz prizmu naših malih kreativaca.</p>
+      </div>
 
-        <img class="middleTop "src="img/slag-gore.png" alt="img">
+        <img class="middleBottom "src="img/slag-dole.png" alt="img">
     </section>
+
+    <section id="thirdSection">
+
+      <div class="socialIcons">
+        <ul class="custom-list">
+          <li><img src="img/Facebook.png" alt=""></li>
+          <li><img src="img/Instagram.png" alt=""></li>
+        </ul>
+      </div>
+
+      <div class="thirdSection-text secondary-font">
+        <ul class="custom-list">
+          <li><a href="mailto:office@smilebox.rs">office@smilebox.rs</a></li>
+          <li>Sweat Center DOO</li>
+        </ul>
+      </div>
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+
+    </section>
+
   </body>
+
+ <script type="text/javascript">
+jQuery(function($){
+    var $navbar = $('#main-nav');
+    $(window).scroll(function(event) {
+    var $current = $(this).scrollTop();
+         if( $current > 100 ){
+              $navbar.addClass('scrolled');
+         } else {
+              $navbar.removeClass('scrolled');
+         }
+    });
+ });
+
+ </script>
+
+ <script type="text/javascript">
+ //Get the button:
+ mybutton = document.getElementById("myBtn");
+
+ // When the user scrolls down 20px from the top of the document, show the button
+ window.onscroll = function() {scrollFunction()};
+
+ function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+ }
+
+ // When the user clicks on the button, scroll to the top of the document
+ function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+ }
+
+ </script>
+
 </html>
