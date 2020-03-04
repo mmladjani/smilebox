@@ -11,10 +11,11 @@
   <body>
     <header>
       <div id="main-nav" class="secondary-font">
+        <a href="http://www.smilebox.rs/index.html"><img class="logo" src="img/logo-smilebox.png"></a>
         <ul>
-          <li><a href="http://www.smilebox.rs/index.html">Početna</a></li>
-          <li><a href="#secondSection">O nama</a></li>
-          <li><a href="#thirdSection">Kontakt</a></li>
+          <li><a class="scrolled-text" href="http://www.smilebox.rs/index.html">Početna</a></li>
+          <li><a class="scrolled-text" href="#secondSection">O nama</a></li>
+          <li><a class="scrolled-text" href="#thirdSection">Kontakt</a></li>
         </ul>
       </div>
     </header>
@@ -66,16 +67,37 @@
   </body>
 
  <script type="text/javascript">
-jQuery(function($){
-    var $navbar = $('#main-nav');
-    $(window).scroll(function(event) {
-    var $current = $(this).scrollTop();
-         if( $current > 100 ){
-              $navbar.addClass('scrolled');
-         } else {
-              $navbar.removeClass('scrolled');
-         }
-    });
+  jQuery(function($){
+      var $navbar = $('#main-nav');
+      $(window).scroll(function(event) {
+      var $current = $(this).scrollTop();
+           if( $current > 100 ){
+                $navbar.addClass('scrolled');
+
+
+           } else {
+                $navbar.removeClass('scrolled');
+
+           }
+      });
+ });
+
+ </script>
+
+ <script type="text/javascript">
+  jQuery(function($){
+      var $navbar = $('#main-nav');
+      $(window).scroll(function(event) {
+      var $current = $(this).scrollTop();
+           if( $current > 100 ){
+
+                $navbar.addClass('scrolled-text');
+
+           } else {
+
+                $navbar.addClass('scrolled-text');
+           }
+      });
  });
 
  </script>
