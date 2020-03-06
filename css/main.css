@@ -86,6 +86,7 @@ body {
   padding: 15px 20px;
   color: white;
   text-decoration: none;
+  border: 2px solid rgba(0, 0, 0, 0);
 }
 
 #main-nav ul li a:hover {
@@ -115,13 +116,13 @@ body {
 }
 
 .scrolled {
-  background-color: rgba(0,0,0,0.5);
+  background-color: #fff;
   transition: 300ms ease;
   box-shadow: 0 3px 20px -3px black;
 }
 
 .scrolled-text {
-  color: #02b3f7;
+  color: #02b3f7 !important;
 }
 
 /* DESKTOP CSS */
