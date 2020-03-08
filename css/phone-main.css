@@ -1,7 +1,7 @@
 
 /* GENERAL CSS */
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 768px) {
 
   @font-face {
     font-family: Helsinki;
@@ -44,8 +44,8 @@
     display: none;
     position: fixed;
     z-index: 111111;
-    bottom: 20px;
-    right: 30px;
+    bottom: 50px;
+    right: 20px;
     border: none;
     outline: none;
     color: white;
@@ -54,95 +54,109 @@
     font-size: 3rem;
   }
 
-  #main-nav {
-    width:100%;
+  .hamburger {
     position: fixed;
-    overflow: hidden;
-    z-index: 10000;
-    display: flex;
-    flex-direction: row;
-    margin: 0px auto;
-    transition: 300ms ease;
+    z-index: 9999999;
+    top: 10px;
+    right: 10px;
   }
 
+  .hamburger-text {
+    color: #02b3f7 !important;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+  #main-nav {
+    width: 100%;
+    height: 75px;
+    background: #ffffff;
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    transition: 300ms ease;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   #main-nav ul {
+    width: 100%;
+    height: 100%;
     margin: 0px auto;
-    padding: 25px 0px;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    list-style-position: inside;
     padding-left: 0px;
+    list-style-position: inside;
+    justify-content: center;
+    align-items: center;
   }
 
   #main-nav ul li {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
+    margin: 0px auto;
+    padding: 15px;
+    margin: 0px;
+    align-items: center;
   }
 
   #main-nav ul li a {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
     text-decoration: none;
-    border: 2px solid rgba(0, 0, 0, 0);
+    color: #02b3f7;
   }
 
-  #main-nav ul li a:hover {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 25px;
-  }
-
-  #main-nav ul li a:active {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 25px;
-  }
 
   .logo {
-    position: fixed;
-    z-index: 111111;
-    top: 20px;
-    left: 50px;
-    cursor: pointer;
-  }
+    display: none;
+}
 
   .scrolled {
     background-color: #ffffff;
     transition: 300ms ease;
     box-shadow: 0 3px 20px -3px black;
-  }
+}
 
   .scrolled-text {
     color: #02b3f7 !important;
   }
 
+
   /* DESKTOP CSS */
 
 
   #firstSection {
-    padding-top: 100px;
-    background-image: url(../img/BG1bs.png);
+    background-image: url(../mobile-img/Screen1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
-    min-height: 1080px;
+    width: 100;
     background-position: center;
     margin: 0px auto;
     }
 
   .firstSection-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0px auto;
     width: 90%;
     display: flex;
@@ -156,15 +170,15 @@
   }
 
   .firstSection-text p {
-    padding-bottom: 150px;
+    padding: 0px 0px 100px 0px;
   }
 
   .firstSection-products {
     margin: 0px auto;
     width: 90%;
     display: flex;
-    flex-direction: row;
-    height: 500px;
+    flex-direction: column;
+
     align-items: center;
     justify-content: center;
     position: relative;
@@ -178,87 +192,76 @@
   .first-product {
     background-image: url(../img/1-boys-Gki.png);
     background-size: contain;
-    height: 400px;
-    width: 400px;
+    height: 260px;
+    width: 260px;
     background-repeat: no-repeat;
+    margin: 20px 0px;
   }
 
   .first-product img {
     display: block;
     margin: 0px auto;
     align-items: center;
-    height: 350px;
+    height: 250px;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 15px 20px 0px 0px;
+    padding-right: 25px;
   }
 
   .second-product {
     background-image: url(../img/2-emoji-oQP.png);
     background-size: contain;
-    height: 400px;
-    width: 400px;
+    height: 260px;
+    width: 260px;
     background-repeat: no-repeat;
+    margin: 20px 0px;
   }
 
   .second-product img {
     display: block;
     margin: 0px auto;
     align-items: center;
-    height: 350px;
+    height: 250px;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 15px 20px 0px 0px;
+    padding-right: 25px;
   }
 
   .third-product {
     background-image: url(../img/3-girls-4bk.png);
     background-size: contain;
-    height: 400px;
-    width: 400px;
+    height: 260px;
+    width: 260px;
     background-repeat: no-repeat;
+    margin: 20px 0px 40px 0px;
   }
 
   .third-product img {
     display: block;
     margin: 0px auto;
     align-items: center;
-    height: 350px;
+    height: 250px;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 15px 20px 0px 0px;
+    padding-right: 25px;
   }
 
-  .creamy-image {
-    background-image: url(../img/slag-gore.png);
-    height: 500px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
   #firstSection .middleTop {
-    width: 100%;
-    z-index: 1000;
-    position: absolute;
-    top: 1020px;
+    display: none;
   }
 
   #secondSection {
-    padding-top: 100px;
-    background-image: url(../img/BG2bs1.png);
+    background-image: url(../mobile-img/Screen2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
-    min-height: 1080px;
+    width: 100%;
     background-position: center;
     margin: 0px auto;
   }
 
   .secondSection-text {
-    padding-top: 300px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding: 100px 50px;
   }
 
   .secondSection-text h1 {
@@ -270,17 +273,14 @@
   }
 
   #secondSection .middleBottom {
-      width: 100%;
-      z-index: 1000;
-      position: absolute;
-      top: 2120px;
+    display: none;
   }
 
   #thirdSection {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(../img/BG3bs.png);
+    background-image: url(../mobile-img/Screen3.png);
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
@@ -319,13 +319,13 @@
   .thirdSection-text ul li {
     padding: 0px 10px 10px;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .thirdSection-text ul li a {
     padding: 0px 10px 10px;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
 
   }

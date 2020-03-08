@@ -4,21 +4,38 @@
     <meta charset="utf-8">
     <title>Smile Box</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/small-desktop-main.css">
+    <link rel="stylesheet" href="css/tablet-main.css">
+    <link rel="stylesheet" href="css/phone-main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
   <body>
-    <header>
+
+
+    <nav id="navigation">
+
+      <a href="javascript:void(0)" onclick="toggleMenu();">
+        <div id="toggle-nav" class="hamburger" onclick="myFunction(this);">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </a>
+
       <div id="main-nav" class="secondary-font">
-        <a href="http://www.smilebox.rs/index.html"><img class="logo" src="img/logo-smilebox.png"></a>
-        <ul>
+        <ul id="menu">
+
+          <a href="http://www.smilebox.rs/index.html"><img class="logo" src="img/logo-smilebox.png"></a>
+
           <li><a href="http://www.smilebox.rs/index.html">Početna</a></li>
           <li><a href="#secondSection">O nama</a></li>
           <li><a href="#thirdSection">Kontakt</a></li>
         </ul>
+
       </div>
-    </header>
+    </nav>
 
     <section id="firstSection">
       <div class="firstSection-text">
@@ -26,9 +43,9 @@
         <p class="secondary-font">Upakovan da iznenadi</p>
         </div>
         <div class="firstSection-products">
-          <div class="first-product"><a href="http://www.smilebox.rs/index.html/boys.html"><img src="img/Boys-small-b1h.png" alt="Toys for boys"></a></div>
-          <div class="second-product"><a href="http://www.smilebox.rs/index.html/emoji.html"><img src="img/Emoji-small-r5j.png" alt="Emoji toys"></a></div>
-          <div class="third-product"><a href="http://www.smilebox.rs/index.html/girls.html"><img src="img/Girls-small-uRG.png" alt="Toys for girls"></a></div>
+          <div class="first-product"><a href="http://www.smilebox.rs/boys.html"><img src="img/Boys-small-b1h.png" alt="Toys for boys"></a></div>
+          <div class="second-product"><a href="http://www.smilebox.rs/emoji.html"><img src="img/Emoji-small-r5j.png" alt="Emoji toys"></a></div>
+          <div class="third-product"><a href="http://www.smilebox.rs/girls.html"><img src="img/Girls-small.png" alt="Toys for girls"></a></div>
         </div>
 
         <img class="middleTop "src="img/slag-gore.png" alt="img">
@@ -70,15 +87,16 @@
   jQuery(function($){
       var $navbarColor = $('#main-nav');
       var $navbar = $('#main-nav a');
+
+
       $(window).scroll(function(event) {
       var $current = $(this).scrollTop();
            if( $current > 100 ){
-            $navbarColor.addClass('scrolled')
+            $navbarColor.addClass('scrolled');
             $navbar.addClass('scrolled-text');
 
-
            } else {
-                $navbarColor.removeClass('scrolled')
+                $navbarColor.removeClass('scrolled');
                 $navbar.removeClass('scrolled-text');
 
            }
@@ -88,25 +106,7 @@
  </script>
 
  <script type="text/javascript">
-  jQuery(function($){
-      var $navbar = $('#main-nav a');
-      var $navbarColor = $('#main-nav');
-      $(window).scroll(function(event) {
-      var $current = $(this).scrollTop();
-           if( $current > 100 ){
-                $navbarColor.addclass('scrolled')
-                $navbar.addClass('scrolled-text');
 
-           } else {
-                $navbarColor.removeCalss('scrolled')
-                $navbar.removeClass('scrolled-text');
-           }
-      });
- });
-
- </script>
-
- <script type="text/javascript">
  //Get the button:
  mybutton = document.getElementById("myBtn");
 
@@ -114,7 +114,7 @@
  window.onscroll = function() {scrollFunction()};
 
  function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -128,5 +128,29 @@
  }
 
  </script>
+
+<script type="text/javascript">
+  function myFunction(x) {
+    x.classList.toggle("change");
+    }
+</script>
+
+<script type="text/javascript">
+  function toggleMenu() {
+    var x = document.getElementById("main-nav");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
+
+<script>
+  function myFunction(x) {
+  x.classList.toggle("change");
+  }
+</script>
+
 
 </html>

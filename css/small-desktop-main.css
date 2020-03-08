@@ -1,7 +1,7 @@
 
 /* GENERAL CSS */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
 
   @font-face {
     font-family: Helsinki;
@@ -136,7 +136,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    min-height: 1080px;
+    min-height: 950px;
     background-position: center;
     margin: 0px auto;
     }
@@ -160,6 +160,7 @@
   }
 
   .firstSection-products {
+    padding-top: 50px;
     margin: 0px auto;
     width: 90%;
     display: flex;
@@ -178,8 +179,8 @@
   .first-product {
     background-image: url(../img/1-boys-Gki.png);
     background-size: contain;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     background-repeat: no-repeat;
   }
 
@@ -190,14 +191,14 @@
     height: 350px;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 15px 20px 0px 0px;
+    padding: 5px 30px 0px 0px;
   }
 
   .second-product {
     background-image: url(../img/2-emoji-oQP.png);
     background-size: contain;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     background-repeat: no-repeat;
   }
 
@@ -208,14 +209,14 @@
     height: 350px;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 15px 20px 0px 0px;
+    padding: 5px 30px 0px 0px;
   }
 
   .third-product {
     background-image: url(../img/3-girls-4bk.png);
     background-size: contain;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     background-repeat: no-repeat;
   }
 
@@ -226,22 +227,14 @@
     height: 350px;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 15px 20px 0px 0px;
-  }
-
-  .creamy-image {
-    background-image: url(../img/slag-gore.png);
-    height: 500px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 5px 30px 0px 0px;
   }
 
   #firstSection .middleTop {
     width: 100%;
     z-index: 1000;
     position: absolute;
-    top: 1020px;
+    top: 1150px;
   }
 
   #secondSection {
@@ -250,13 +243,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    min-height: 1080px;
+    min-height: 950px;
     background-position: center;
     margin: 0px auto;
   }
 
   .secondSection-text {
-    padding-top: 300px;
+    padding-top: 200px;
     padding-left: 150px;
     padding-right: 150px;
   }
@@ -273,7 +266,7 @@
       width: 100%;
       z-index: 1000;
       position: absolute;
-      top: 2120px;
+      top: 2100px;
   }
 
   #thirdSection {
@@ -284,7 +277,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    min-height: 1080px;
+    min-height: 950px;
     background-position: center;
     margin: 0px auto;
   }

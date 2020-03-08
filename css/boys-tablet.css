@@ -1,4 +1,4 @@
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
 
 /* GENERAL CSS */
 
@@ -54,7 +54,9 @@
   }
 
   #main-nav {
+    font-size: 1.3rem;
     width:100%;
+    height: 100px;
     position: fixed;
     overflow: hidden;
     z-index: 10000;
@@ -62,6 +64,8 @@
     flex-direction: row;
     margin: 0px auto;
     transition: 300ms ease;
+    justify-content: center;
+    align-items: center;
   }
 
   #main-nav ul {
@@ -75,14 +79,13 @@
   }
 
   #main-nav ul li {
-    font-size: 1.5rem;
     margin: 10px 5px;
     padding: 15px 20px;
     color: white;
   }
 
   #main-nav ul li a {
-    font-size: 1.5rem;
+
     margin: 10px 5px;
     padding: 15px 20px;
     color: white;
@@ -91,7 +94,7 @@
   }
 
   #main-nav ul li a:hover {
-    font-size: 1.5rem;
+
     margin: 10px 5px;
     padding: 15px 20px;
     color: white;
@@ -100,7 +103,7 @@
   }
 
   #main-nav ul li a:active {
-    font-size: 1.5rem;
+
     margin: 10px 5px;
     padding: 15px 20px;
     color: white;
@@ -111,8 +114,9 @@
   .logo {
     position: fixed;
     z-index: 111111;
-    top: 20px;
-    left: 50px;
+    top: 15px;
+    left: 25px;
+    width: 75px;
     cursor: pointer;
   }
 
@@ -137,7 +141,6 @@
 
   #firstSection img {
     width: 100%;
-    min-height: 800px;
   }
 
 }

@@ -4,64 +4,109 @@
     <meta charset="utf-8">
     <title>Smile Box</title>
     <link rel="stylesheet" href="css/boys.css">
+    <link rel="stylesheet" href="css/boys-phone.css">
+    <link rel="stylesheet" href="css/boys-tablet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
   <body>
-    <header>
+    <nav id="navigation">
+
+      <a href="javascript:void(0)" onclick="toggleMenu();">
+        <div id="toggle-nav" class="hamburger" onclick="myFunction(this);">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </a>
+
       <div id="main-nav" class="secondary-font">
-        <a href="http://www.smilebox.rs/index.html"><img class="logo" src="img/logo-smilebox.png"></a>
-        <ul>
+        <ul id="menu">
+
+          <a href="http://www.smilebox.rs/index.html"><img class="logo" src="img/logo-smilebox.png"></a>
+
           <li><a href="http://www.smilebox.rs/index.html">Početna</a></li>
-          <li><a href="http://www.smilebox.rs/index.html#secondSection">O nama</a></li>
-          <li><a href="http://www.smilebox.rs/index.html#thirdSection">Kontakt</a></li>
+          <li><a href="#secondSection">O nama</a></li>
+          <li><a href="#thirdSection">Kontakt</a></li>
         </ul>
+
       </div>
-    </header>
+    </nav>
 
     <section id="firstSection">
-        <img src="img/1-iP_.jpg" alt="boys">
+        <span class="boys-replaced"><img class="boys-replaced" src="img/boys1.jpg" alt="boys"></span>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
     </section>
   </body>
 
- <script type="text/javascript">
-jQuery(function($){
-    var $navbar = $('#main-nav');
-    $(window).scroll(function(event) {
-    var $current = $(this).scrollTop();
-         if( $current > 100 ){
-              $navbar.addClass('scrolled');
-         } else {
-              $navbar.removeClass('scrolled');
-         }
-    });
- });
+  <script type="text/javascript">
+   jQuery(function($){
+       var $navbarColor = $('#main-nav');
+       var $navbar = $('#main-nav a');
 
+
+       $(window).scroll(function(event) {
+       var $current = $(this).scrollTop();
+            if( $current > 100 ){
+             $navbarColor.addClass('scrolled');
+             $navbar.addClass('scrolled-text');
+
+            } else {
+                 $navbarColor.removeClass('scrolled');
+                 $navbar.removeClass('scrolled-text');
+
+            }
+       });
+  });
+
+  </script>
+
+  <script type="text/javascript">
+
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+   if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+     mybutton.style.display = "block";
+   } else {
+     mybutton.style.display = "none";
+   }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+   document.body.scrollTop = 0; // For Safari
+   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+  </script>
+
+ <script type="text/javascript">
+   function myFunction(x) {
+     x.classList.toggle("change");
+     }
  </script>
 
  <script type="text/javascript">
- //Get the button:
- mybutton = document.getElementById("myBtn");
+   function toggleMenu() {
+     var x = document.getElementById("main-nav");
+     if (x.style.display === "block") {
+       x.style.display = "none";
+     } else {
+       x.style.display = "block";
+     }
+   }
+ </script>
 
- // When the user scrolls down 20px from the top of the document, show the button
- window.onscroll = function() {scrollFunction()};
-
- function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
- }
-
- // When the user clicks on the button, scroll to the top of the document
- function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
- }
-
+ <script>
+   function myFunction(x) {
+   x.classList.toggle("change");
+   }
  </script>
 
 </html>

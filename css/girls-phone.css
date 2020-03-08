@@ -1,6 +1,7 @@
-@media screen and (min-width: 1200px) {
 
 /* GENERAL CSS */
+
+@media screen and (max-width: 768px) {
 
   @font-face {
     font-family: Helsinki;
@@ -43,8 +44,8 @@
     display: none;
     position: fixed;
     z-index: 111111;
-    bottom: 20px;
-    right: 30px;
+    bottom: 50px;
+    right: 20px;
     border: none;
     outline: none;
     color: white;
@@ -53,74 +54,89 @@
     font-size: 3rem;
   }
 
-  #main-nav {
-    width:100%;
+  .hamburger {
     position: fixed;
-    overflow: hidden;
-    z-index: 10000;
-    display: flex;
-    flex-direction: row;
-    margin: 0px auto;
-    transition: 300ms ease;
+    z-index: 9999999;
+    top: 10px;
+    right: 10px;
   }
 
+  .hamburger-text {
+    color: #02b3f7 !important;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+  #main-nav {
+    width: 100%;
+    height: 75px;
+    background: #ffffff;
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    transition: 300ms ease;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   #main-nav ul {
+    width: 100%;
+    height: 100%;
     margin: 0px auto;
-    padding: 25px 0px;
+    margin: 0px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    list-style-position: inside;
     padding-left: 0px;
+    list-style-position: inside;
+    justify-content: center;
+    align-items: center;
   }
 
   #main-nav ul li {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
+    margin: 0px auto;
+    padding: 15px;
+    margin: 0px;
+    align-items: center;
   }
 
   #main-nav ul li a {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
     text-decoration: none;
-    border: 2px solid rgba(0, 0, 0, 0);
+    color: #02b3f7;
   }
 
-  #main-nav ul li a:hover {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 25px;
-  }
-
-  #main-nav ul li a:active {
-    font-size: 1.5rem;
-    margin: 10px 5px;
-    padding: 15px 20px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 25px;
-  }
 
   .logo {
-    position: fixed;
-    z-index: 111111;
-    top: 20px;
-    left: 50px;
-    cursor: pointer;
-  }
+    display: none;
+}
 
   .scrolled {
     background-color: #ffffff;
     transition: 300ms ease;
     box-shadow: 0 3px 20px -3px black;
-  }
+}
 
   .scrolled-text {
     color: #02b3f7 !important;
@@ -128,16 +144,24 @@
 
   /* DESKTOP CSS */
 
-
   #firstSection {
     width: 100%;
+    min-height: 1200px;
     background-position: center;
     margin: 0px auto;
     }
 
   #firstSection img {
+    display: none;
+  }
+
+  .girls-replaced {
+    display: block;
+    background-image: url(../mobile-img/Proizvodi2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1200px;
     width: 100%;
-    min-height: 800px;
   }
 
 }
